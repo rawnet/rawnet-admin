@@ -6,30 +6,23 @@
   <%= javascript_include_tag 'rawnet_admin/application' %>
   <%= csrf_meta_tags %>
 </head>
-<% if flash[:alert] %>
-<div class="alert alert-danger">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <%= flash[:alert] %>
-</div>
-<% end %>
-<% if flash[:notice] %>
-<div class="alert alert-success">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <%= flash[:notice] %>
-</div>
-<% end %>
-<%= render "header" %>
-<%= render "search" if controller_name != "dashboard" || action_name == "index" %>
-<section role="main">
-  <%= yield %>
-</section>
-<% if false %>
-<nav id="breadcrumb">
-  <ul>
-    <li><%= link_to "Admin", root_path %></li>
-    <li>Current Page</li>
-  </ul>
-</nav>
-<% end %>
+<body>
+  <% if flash[:alert] %>
+  <div class="alert alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <%= flash[:alert] %>
+  </div>
+  <% end %>
+  <% if flash[:notice] %>
+  <div class="alert alert-success">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <%= flash[:notice] %>
+  </div>
+  <% end %>
+  <%= render "header" %>
+  <%= render "search" if controller_name != "dashboard" || action_name == "index" %>
+  <section role="main">
+    <%= yield %>
+  </section>
 </body>
 </html>

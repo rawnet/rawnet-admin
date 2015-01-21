@@ -1,46 +1,11 @@
 <header role="banner">
   <%= link_to root_path, id: "brand" do %>
-  <%= image_tag "rawnet_admin/logo.png" %>
+    <%= image_tag "rawnet_admin/logo.png" %>
   <% end %>
-  <nav role="navigation">
-    <ul id="mainNav">
-      <li>
-        <%= link_to "#contentNav" do %>
-        <%= image_tag "rawnet_admin/adminIcon.png" %>
-        Content Management
-        <% end %>
-      </li>
-    </ul>
-  </nav>
+  <%= render "main_navigation" %>
 
   <div id="subNav">
-    <nav id="contentNav">
-      <h3>Content Management</h3>
-      <p></p>
-      <ul>
-        <li>
-          <%#= active_link_to 'Services', [:admin, :services] %>
-        </li>
-      </ul>
-    </nav>
-
-    <ul class="actions">
-      <li>
-        <%= link_to 'View Main Site', main_app.root_url, class: 'view-site' %>
-      </li>
-      <% if controller_name != "dashboard" && action_name == "index" %>
-      <li>
-        <%= link_to "Search #{resource_class.to_s.titleize.pluralize}", '#searchControl', class: 'search' %>
-      </li>
-      <% end %>
-      <li>
-        <%#= link_to "Log out #{current_cms_user.name}", destroy_cms_user_session_path, method: :delete, class: 'logout' %>
-      </li>
-      <li>
-        <%= link_to "http://www.rawnet.com", class: "rawnet" do %>
-        Built with <span class="heart">love</span> by <span class="rawnet">Rawnet</span>
-        <% end %>
-      </li>
-    </ul>
+    <%= render "sub_navigation" %>
+    <%= render "footer_navigation" %>
   </div>
 </header>

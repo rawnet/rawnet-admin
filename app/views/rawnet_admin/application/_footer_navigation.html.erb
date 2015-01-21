@@ -1,0 +1,18 @@
+<ul class="actions">
+  <li>
+    <%= link_to 'View Main Site', main_app.root_url, class: 'view-site' %>
+  </li>
+  <% if controller_name != "dashboard" && action_name == "index" %>
+  <li>
+    <%= link_to "Search #{resource_class.to_s.titleize.pluralize}", '#searchControl', class: 'search' %>
+  </li>
+  <% end %>
+  <li>
+    <%#= link_to "Log out #{current_cms_user.name}", destroy_cms_user_session_path, method: :delete, class: 'logout' %>
+  </li>
+  <li>
+    <%= link_to "http://www.rawnet.com", class: "rawnet" do %>
+    Built with <span class="heart">love</span> by <span class="rawnet">Rawnet</span>
+    <% end %>
+  </li>
+</ul>
