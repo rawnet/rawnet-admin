@@ -19,6 +19,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '~> 4.2.0'
   s.add_dependency 'jquery-rails'
   s.add_dependency 'sass-rails', '>= 3.2'
+  s.add_dependency 'has_scope'
+  s.add_dependency 'active_link_to'
+  s.add_dependency 'kaminari'
   s.add_dependency 'bootstrap-sass', '~> 3.2.0'
   s.add_dependency 'bootstrap-kaminari-views'
 

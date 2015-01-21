@@ -1,4 +1,8 @@
 require "bootstrap-sass"
+require "has_scope"
+require "active_link_to"
+require "kaminari"
+require "bootstrap-kaminari-views"
 require "rawnet_admin/engine"
 
 module RawnetAdmin

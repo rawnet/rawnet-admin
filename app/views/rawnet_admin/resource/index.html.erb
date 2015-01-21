@@ -3,7 +3,7 @@
 <%= render 'add_button' %>
 
 <ul class="nav nav-tabs">
-  <li><%= active_link_to 'All', [:admin, resource_class], :active => no_scopes_applied?, wrap_tag: :li  %></li>
+  <li><%= active_link_to 'All', [resource_class], :active => true, wrap_tag: :li  %></li>
   <%= render 'tabs' %>
 </ul>
 
