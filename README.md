@@ -19,7 +19,7 @@ bundle install
 
 RawnetAdmin provides a method to mount the engine, and inject any additional routes you need
 
-```
+```ruby
 RawnetAdmin.mount(self) do
   resources :users, only: [index, :edit, :update]
 end
@@ -29,7 +29,7 @@ end
 
 To create the `users` controller from the routing example above, create a new controller at `app/controllers/rawnet_admin/users_controller.rb` and inherit from `RawnetAdmin::ResourceController`
 
-```
+```ruby
 module RawnetAdmin
   class UsersController < ResourceController
   end
@@ -51,7 +51,7 @@ To override any views for _all_ resources, create a folder at `app/views/rawnet_
 
 To configure RawnetAdmin, create an initializer at `app/config/initializers/rawnet_admin.rb` and enter the following;
 
-```
+```ruby
 RawnetAdmin.configure do |config|
   config.site_name = "Rawnet Admin"
   config.authenticate_method = :authenticate_admin!
