@@ -2,6 +2,7 @@ module RawnetAdmin
   class Configuration
     @@defaults = {
       site_name: 'Rawnet Admin',
+      user_method: :current_user,
       authenticate_method: :authenticate_admin!
     }
 

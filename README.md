@@ -57,6 +57,7 @@ To configure RawnetAdmin, create an initializer at `app/config/initializers/rawn
 ```ruby
 RawnetAdmin.configure do |config|
   config.site_name = "Rawnet Admin"
+  config.user_method = :current_user
   config.authenticate_method = :authenticate_admin!
 end
 ```
