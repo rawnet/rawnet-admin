@@ -35,5 +35,9 @@ module RawnetAdmin
         current_scopes.keys.include? name
       end
     end
+
+    def no_scopes_applied?
+      ((controller.scopes_configuration.keys & current_scopes.keys) - [:page]).empty?
+    end
   end
 end

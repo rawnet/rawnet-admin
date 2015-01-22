@@ -1,3 +1,3 @@
 <ul class="nav nav-tabs">
-  <li><%= active_link_to 'All', [resource_class], :active => true, wrap_tag: :li  %></li>
+  <%= active_link_to 'All', [resource_class], active: no_scopes_applied?, wrap_tag: :li  %>
 </ul>

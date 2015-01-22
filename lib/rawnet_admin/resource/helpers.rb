@@ -104,7 +104,7 @@ module RawnetAdmin
       end
 
       def apply_scopes_if_available(association)
-        respond_to?(:apply_scopes) ? apply_scopes(association) : association
+        respond_to?(:apply_scopes, true) ? apply_scopes(association) : association
       end
 
     end
