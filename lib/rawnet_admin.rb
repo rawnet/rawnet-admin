@@ -1,5 +1,6 @@
 require "bootstrap-sass"
 require "has_scope"
+require "responders"
 require "active_link_to"
 require "kaminari"
 require "bootstrap-kaminari-views"
