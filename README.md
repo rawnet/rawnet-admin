@@ -5,11 +5,11 @@ An inheritable, customisable admin interface for Ruby on Rails
 ## Installation
 
 Add RawnetAdmin to your gemfile
-```
+```ruby
 gem 'rawnet_admin', git: 'git@github.com:rawnet/rawnet-admin.git', branch: 'master'
 ```
 And then bundle..
-```
+```sh
 bundle install
 ```
 
