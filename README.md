@@ -34,7 +34,6 @@ module RawnetAdmin
   class UsersController < ResourceController
   end
 end
-
 ```
 
 In general, controllers utilise the methods and options defined by [InheritedResources](https://github.com/josevalim/inherited_resources)
