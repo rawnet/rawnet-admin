@@ -2,10 +2,7 @@
 
 <%= render 'add_button' %>
 
-<ul class="nav nav-tabs">
-  <li><%= active_link_to 'All', [resource_class], :active => true, wrap_tag: :li  %></li>
-  <%= render 'tabs' %>
-</ul>
+<%= render 'tabs' %>
 
 <table class='table table-striped' data-behaviour="ordering">
   <thead>
