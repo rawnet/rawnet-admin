@@ -1,5 +1,5 @@
 module RawnetAdmin
-  class DashboardController < BaseController
+  class DashboardController < ApplicationController
     def index
     end
   end
