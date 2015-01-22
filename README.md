@@ -17,11 +17,15 @@ bundle install
 
 ### Routes
 
-RawnetAdmin provides a method to mount the engine, and inject any additional routes you need
+RawnetAdmin provides a method to mount the engine, and inject any additional routes you need. Just add the following to your `routes.rb` file
 
 ```ruby
-RawnetAdmin.mount(self) do
-  resources :users, only: [index, :edit, :update]
+Rails.application.routes.draw do
+  # your other routes..
+
+  RawnetAdmin.mount(self) do
+    resources :users, only: [index, :edit, :update]
+  end
 end
 ```
 
