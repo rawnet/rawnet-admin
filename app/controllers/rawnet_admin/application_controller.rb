@@ -1,5 +1,5 @@
 module RawnetAdmin
-  class ApplicationController < ::ApplicationController
+  class ApplicationController < RawnetAdmin.config.parent_controller.constantize
     before_filter :authorize_rawnet_admin_user
 
     protected

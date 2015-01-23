@@ -3,7 +3,8 @@ module RawnetAdmin
     @@defaults = {
       site_name: 'Rawnet Admin',
       user_method: :current_user,
-      authenticate_method: :authenticate_admin!
+      authenticate_method: :authenticate_admin!,
+      parent_controller: '::ApplicationController'
     }
 
     cattr_accessor :config
