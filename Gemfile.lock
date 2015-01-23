@@ -137,6 +137,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    spring (1.2.0)
+    spring-commands-rspec (1.0.4)
+      spring (>= 0.9.1)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -158,3 +161,5 @@ PLATFORMS
 DEPENDENCIES
   rawnet_admin!
   rspec-rails
+  spring
+  spring-commands-rspec

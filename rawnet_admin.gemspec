@@ -27,5 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap-sass', '~> 3.2.0'
   s.add_dependency 'bootstrap-kaminari-views'
 
+  s.add_development_dependency "spring"
+  s.add_development_dependency "spring-commands-rspec"
   s.add_development_dependency "rspec-rails"
 end
