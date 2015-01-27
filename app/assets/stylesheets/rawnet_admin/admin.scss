@@ -203,11 +203,12 @@ span.false {
 }
 span.true {
   display: block;
-  width: 0;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   margin: 0 auto;
   padding-left: 13px;
   background: url(image_path("rawnet_admin/tick.png"));
+  background-size: 18px 18px;
   overflow: hidden;
 }
 a.noStyle {
