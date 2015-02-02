@@ -24,14 +24,19 @@ Rails.application.routes.draw do
   # your other routes..
 
   RawnetAdmin.mount(self) do
-    resources :users, only: [index, :edit, :update]
+    resources :users, only: [:index, :edit, :update]
+    # any other custom routes
   end
 end
 ```
 
-### Controller
+### Controllers
 
-To create the `users` controller from the routing example above, create a new controller at `app/controllers/rawnet_admin/users_controller.rb` and inherit from `RawnetAdmin::ResourceController`
+#### ResourceController
+
+The ResourceController provides a base for resourceful controllers, and supplies a template for the usual resource methods and CRUD actions. 
+
+To create a `users` controller, create a new controller at `app/controllers/rawnet_admin/users_controller.rb` and inherit from `RawnetAdmin::ResourceController`
 
 ```ruby
 module RawnetAdmin
@@ -44,11 +49,19 @@ In general, controllers utilise the methods and options defined by [InheritedRes
 
 ### Views
 
-You can override any of the [views used by the gem](https://github.com/rawnet/rawnet-admin/tree/master/app/views/rawnet_admin/resource), on a global or per-resource basis.
+#### Application views
+
+The application views (and layout) can be overriden as needed. Many of these views, such as `application/_main_navigation.html.erb`, will need to be overriden to customise the navigation, logo etc. 
+
+#### Resource views
+
+You can override any of the [resource views used by the gem](https://github.com/rawnet/rawnet-admin/tree/master/app/views/rawnet_admin/resource), on a global or per-resource basis.
 
 To override any views for the `users` resource specifically, create a folder at `app/views/rawnet_admin/users`
 
 To override any views for _all_ resources, create a folder at `app/views/rawnet_admin/resource`
+
+The only view you need to *create* for a resourceful controller is `_form.html.erb`, as no form view is provided by default. 
 
 ## Configuration
 
