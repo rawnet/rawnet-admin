@@ -1,5 +1,5 @@
 module RawnetAdmin
-  class ResourceController < ApplicationController
+  class ResourceController < RawnetAdmin::ApplicationController
     responders :flash, :http_cache, :collection
     respond_to :html, :xml, :json
 
