@@ -6,10 +6,19 @@ describe RawnetAdmin do
       something_else = double(:something_else)
       RawnetAdmin.configure do |config|
         config.something = something
-        config.something_else = something_else
       end
       expect(RawnetAdmin.config.something).to eq(something)
-      expect(RawnetAdmin.config.something_else).to eq(something_else)
+    end
+  end
+
+  describe '.application' do
+    it 'returns an instance of RawnetAdmin::Application' do
+      expect(RawnetAdmin.application).to be_a(RawnetAdmin::Application)
+    end
+
+    it 'always returns the same instance' do
+      application = RawnetAdmin.application
+      expect(RawnetAdmin.application).to eq(application)
     end
   end
 end
