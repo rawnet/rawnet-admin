@@ -4,7 +4,9 @@ module RawnetAdmin
       site_name: 'Rawnet Admin',
       user_method: :current_user,
       authenticate_method: :authenticate_admin!,
-      parent_controller: '::ApplicationController'
+      parent_controller: '::ApplicationController',
+      javascripts: [],
+      stylesheets: []
     }
 
     cattr_accessor :config

@@ -73,5 +73,7 @@ RawnetAdmin.configure do |config|
   config.user_method = :current_user
   config.authenticate_method = :authenticate_admin!
   config.parent_controller = '::ApplicationController'
+  config.stylesheets << 'rawnet_admin/user-stylesheet'
+  config.javascripts << 'rawnet_admin/user-javascript'
 end
 ```

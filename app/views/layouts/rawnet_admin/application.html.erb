@@ -3,7 +3,14 @@
 <head>
   <title><%= site_name %> : Admin</title>
   <%= stylesheet_link_tag 'rawnet_admin/application', :media => 'all' %>
+  <% RawnetAdmin.config.stylesheets.each do |sheet| %>
+    <%= stylesheet_link_tag sheet, :media => 'all' %>
+  <% end %>
+
   <%= javascript_include_tag 'rawnet_admin/application' %>
+  <% RawnetAdmin.config.javascripts.each do |script| %>
+    <%= javascript_include_tag script %>
+  <% end %>
   <%= csrf_meta_tags %>
 </head>
 <body>
