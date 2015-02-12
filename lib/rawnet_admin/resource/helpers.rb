@@ -1,3 +1,5 @@
+require 'rawnet_admin/black_hole'
+
 module RawnetAdmin
   module Resource
     module Helpers

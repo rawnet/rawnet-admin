@@ -28,13 +28,6 @@ module RawnetAdmin
       end
       alias :create! :create
 
-      def create(options={}, &block)
-        object = build_resource
-        create_resource(object)
-        respond_with_dual_blocks(object, options, &block)
-      end
-      alias :create! :create
-
       def update(options={}, &block)
         object = resource
         update_resource(object, resource_params)
