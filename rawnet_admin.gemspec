@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'responders'
   s.add_dependency 'active_link_to'
   s.add_dependency 'kaminari'
-  s.add_dependency 'bootstrap-sass', '~> 3.2.0'
+  s.add_dependency 'bootstrap-sass', '~> 3.3.3'
   s.add_dependency 'bootstrap-kaminari-views'
 
   s.add_development_dependency "spring"

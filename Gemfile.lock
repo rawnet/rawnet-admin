@@ -4,7 +4,7 @@ PATH
     rawnet_admin (0.0.1)
       active_link_to
       bootstrap-kaminari-views
-      bootstrap-sass (~> 3.2.0)
+      bootstrap-sass (~> 3.3.3)
       has_scope
       jquery-rails
       kaminari
@@ -53,17 +53,24 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    autoprefixer-rails (5.1.5)
+      execjs
+      json
     bootstrap-kaminari-views (0.0.5)
       kaminari (>= 0.13)
       rails (>= 3.1)
-    bootstrap-sass (3.2.0.2)
-      sass (~> 3.2)
+    bootstrap-sass (3.3.3)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.2.2)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    execjs (2.2.2)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
-    has_scope (0.5.1)
+    has_scope (0.6.0)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
     hike (1.2.3)
     i18n (0.7.0)
     jquery-rails (4.0.3)
@@ -71,7 +78,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.2)
-    kaminari (0.16.2)
+    kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     loofah (2.0.1)
@@ -112,8 +119,8 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
-    responders (2.0.2)
-      railties (>= 4.2.0.alpha, < 5)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
