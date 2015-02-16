@@ -119,14 +119,21 @@ ul.sortable{
 // ---------------------------------------------------------------- //
 // TABLES
 // ---------------------------------------------------------------- //
-table {
-  margin-left: -30px;
-  width: 910px !important;
-  tr {
-    td:first-child,
-    th:first-child {
-      padding-left: 30px !important;
+section[role='man']{
+  > table{
+    margin-left: -30px;
+    width: 910px !important;
+    tr {
+      td:first-child,
+      th:first-child {
+        padding-left: 30px !important;
+      }
     }
+  }
+}
+
+table {
+  tr {
     th {
       font-size: 13px;
       text-align: left;
