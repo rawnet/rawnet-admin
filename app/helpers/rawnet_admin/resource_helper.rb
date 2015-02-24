@@ -1,26 +1,24 @@
 module RawnetAdmin
   module ResourceHelper
     def show_link_to(route, text='Show')
-      link_to route do
-        "<i class='glyphicon glyphicon-search'></i> #{text}".html_safe
-      end
+      icon_link_to text, route, 'search'
     end
 
     def edit_link_to(route, text='Edit')
-      link_to route do
-        "<i class='glyphicon glyphicon-pencil'></i> #{text}".html_safe
-      end
+      icon_link_to text, route, 'pencil'
     end
 
     def delete_link_to(route, confirm="Are you sure?")
-      link_to route, :method => :delete, data: {:confirm => confirm} do
-        "<i class='glyphicon glyphicon-trash'></i> Delete".html_safe
-      end
+      icon_link_to 'Delete', route, 'trash', :method => :delete, data: {:confirm => confirm}
     end
 
     def view_link_to(route, text="View")
-      link_to route, :target => "_blank" do
-        "<i class='glyphicon glyphicon-new-window'></i> #{text}".html_safe
+      icon_link_to text, route, 'new-window', {:target => "_blank" }
+    end
+
+    def icon_link_to(text, route, icon, opts={})
+      link_to route, opts do
+        "<i class='glyphicon glyphicon-#{icon}'></i> #{text}".html_safe
       end
     end
 
