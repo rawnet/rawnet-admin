@@ -23,13 +23,7 @@ RawnetAdmin.menu = function(){
         search.fadeOut("fast").removeClass('open');
         $(document).unbind("keyup");
       }else if (e.keyCode === 13) {
-        term = $("#search_term").val();
-        if ($("#search_published").val()== undefined) {
-          window.location.href = "?by_name=" + term
-        } else {
-          published = $("#search_published").val();
-          window.location.href = "?published=" + published + "&by_name=" + term
-        }
+        search.find('form').trigger('submit');
       }
     });
   }

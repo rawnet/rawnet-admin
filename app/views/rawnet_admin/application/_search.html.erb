@@ -1,6 +1,6 @@
 <section id="searchControl">
-  <form action="" method="GET">
-    <input type="text" name="keywords" placeholder="Type to search..." id="search_term" />
-  </form>
+  <%= form_tag '', method: :get do %>
+    <%= text_field_tag(:keywords, params[:keywords], placeholder: 'Type to search...', id: 'search_term') %>
+  <% end %>
   <p>Begin typing your search above and press Enter to search. Press ESC to cancel.</p>
 </section>
