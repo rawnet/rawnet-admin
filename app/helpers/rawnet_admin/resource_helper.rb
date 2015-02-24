@@ -1,19 +1,25 @@
 module RawnetAdmin
   module ResourceHelper
-    def show_link_to(route, text='Show')
-      icon_link_to text, route, 'search'
+    def show_link_to(route, text='Show', options={})
+      icon_link_to text, route, 'search', options
     end
 
-    def edit_link_to(route, text='Edit')
-      icon_link_to text, route, 'pencil'
+    def edit_link_to(route, text='Edit', options={})
+      icon_link_to text, route, 'pencil', options
     end
 
-    def delete_link_to(route, confirm="Are you sure?")
-      icon_link_to 'Delete', route, 'trash', :method => :delete, data: {:confirm => confirm}
+    def delete_link_to(route, text='Delete', options={})
+      options = {
+          method: :delete,
+          data: {
+              confirm: "Are you sure?"
+          }
+      }.merge(options)
+      icon_link_to 'Delete', route, 'trash', options
     end
 
-    def view_link_to(route, text="View")
-      icon_link_to text, route, 'new-window', {:target => "_blank" }
+    def view_link_to(route, text="View", options={})
+      icon_link_to text, route, 'new-window', {:target => "_blank" }.merge(options)
     end
 
     def icon_link_to(text, route, icon, opts={})
