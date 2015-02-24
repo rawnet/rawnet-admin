@@ -27,7 +27,7 @@
   </div>
   <% end %>
   <%= render "header" %>
-  <%= render "search" if controller_name != "dashboard" || action_name == "index" %>
+  <%= content_for(:search) %>
   <section role="main">
     <%= yield %>
   </section>
