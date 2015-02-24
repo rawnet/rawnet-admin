@@ -2,7 +2,7 @@
   <li>
     <%= link_to 'View Main Site', main_app.root_url, class: 'view-site' %>
   </li>
-  <% if controller_name != "dashboard" && action_name == "index" %>
+  <% if content_for?(:search) %>
   <li>
     <%= link_to "Search #{resource_class.to_s.titleize.pluralize}", '#searchControl', class: 'search' %>
   </li>

@@ -1,0 +1,29 @@
+<%= render 'listing_tabs' %>
+
+<table class='table table-striped' data-behaviour="ordering">
+  <thead>
+  <tr>
+    <%= render 'listing_header' %>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% collection.each do |item| %>
+    <tr data-url="<%= "/admin/#{resource_class.to_s.underscore.pluralize}/#{item.id}" %>" data-model="<%= resource_class.to_s.underscore %>">
+      <%= render 'listing_item', item: item %>
+      <td>
+        <div class="btn-group pull-right">
+          <%= link_to "#", class: 'btn btn-default', data: {toggle: "dropdown"} do %>
+            Actions <span class="caret"></span>
+          <% end %>
+          <ul class="dropdown-menu">
+            <%= render 'listing_item_controls', item: item %>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= render 'listing_pagination' %>
