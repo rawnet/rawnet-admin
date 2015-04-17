@@ -36,7 +36,7 @@ RawnetAdmin.menu = function(){
     activeMenu.addClass('active');
     activeSelector.addClass('active');
 
-    $(document).on('click', '#mainNav a, #dashboardNav a', function(e) {
+    $(document).on('click', '#mainNav a[href^="#"], #dashboardNav a[href^="#"]', function(e) {
       e.preventDefault();
       toggleNav($(this));
     });
