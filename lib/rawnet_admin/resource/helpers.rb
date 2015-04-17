@@ -6,9 +6,13 @@ module RawnetAdmin
 
       protected
 
+      def paginated_collection
+        collection.page(params[:page] || 1).per(params[:per] || 25)
+      end
+
       def collection
         get_collection_ivar || begin
-          set_collection_ivar(end_of_association_chain.page(params[:page] || 1).per(params[:per] || 25))
+          set_collection_ivar(end_of_association_chain)
         end
       end
 
