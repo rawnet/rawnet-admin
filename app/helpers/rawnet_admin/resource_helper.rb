@@ -15,7 +15,7 @@ module RawnetAdmin
               confirm: "Are you sure?"
           }
       }.merge(options)
-      icon_link_to 'Delete', route, 'trash', options
+      icon_link_to text, route, 'trash', options
     end
 
     def view_link_to(route, text="View", options={})
