@@ -7,6 +7,7 @@ require "bootstrap-kaminari-views"
 require "rawnet_admin/application"
 require 'rawnet_admin/resource/helpers'
 require 'rawnet_admin/resource/actions'
+require 'rawnet_admin/resource/pagination'
 require "rawnet_admin/engine"
 
 module RawnetAdmin
