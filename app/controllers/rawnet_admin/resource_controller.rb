@@ -6,6 +6,6 @@ module RawnetAdmin
     include RawnetAdmin::Resource::Helpers
     include RawnetAdmin::Resource::Actions
 
-    helper_method :paginated_collection, :collection, :resource, :resource_class
+    helper_method :collection, :resource, :resource_class
   end
 end
