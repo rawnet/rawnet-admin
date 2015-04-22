@@ -32,6 +32,10 @@ module RawnetAdmin
       "<i class='glyphicon glyphicon-ok'></i>".html_safe
     end
 
+    def paginated?(scope=collection)
+      scope.respond_to?(:total_pages)
+    end
+
     def scope_applied?(name, value=nil)
       if value
         current_scopes.keys.include?(name) && current_scopes[name] == value.to_s
