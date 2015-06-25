@@ -1,5 +1,7 @@
 module RawnetAdmin
   module ResourceHelper
+    EXCLUDED_SCOPES = [:page, :per]
+
     def show_link_to(route, text='Show', options={})
       icon_link_to text, route, 'search', options
     end
@@ -45,7 +47,7 @@ module RawnetAdmin
     end
 
     def no_scopes_applied?
-      (((controller.scopes_configuration.try(:keys) || []) & current_scopes.keys) - [:page]).empty?
+      (((controller.scopes_configuration.try(:keys) || []) & current_scopes.keys) - EXCLUDED_SCOPES).empty?
     end
   end
 end
