@@ -13,6 +13,11 @@ And then bundle..
 bundle install
 ```
 
+## Additional Modules
+
+###[Froala](https://github.com/rawnet/rawnet-admin-froala)
+Froala WYSIWYG integration
+
 ## Basic Usage
 
 ### Routes
