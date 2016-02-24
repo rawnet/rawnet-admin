@@ -37,7 +37,11 @@ module RawnetAdmin
       private
 
       def end_of_association_chain
-        apply_scopes_if_available(resource_class)
+        apply_scopes_if_available(begin_of_association_chain)
+      end
+
+      def begin_of_association_chain
+        resource_class.where(nil)
       end
 
       def get_resource_ivar
